@@ -1,0 +1,11 @@
+# Ignore Airflow and Spark generated files
+logs/
+data/
+plugins/
+__pycache__/
+
+# Ignore IDE and OS-specific files
+.vscode/
+.idea/
+*.pyc
+*.DS_Store
