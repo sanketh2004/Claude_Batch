@@ -210,7 +210,7 @@ create_output_dir = BashOperator(
 # Task 4: Spark job for data processing
 spark_processing_task = SparkSubmitOperator(
     task_id='spark_weather_processing',
-    application='/opt/airflow/spark_jobs/weather_processing.py',
+    application='/opt/spark/jobs/spark_job.py',
     conn_id='spark_default',
     verbose=True,
     application_args=[
