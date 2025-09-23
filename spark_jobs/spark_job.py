@@ -73,4 +73,4 @@ class WeatherDataProcessor:
         df = df.filter(col("Date").isNotNull() & col("City").isNotNull())
         
         # Add year, month columns for partitioning and aggregation
-        df = df.withColumn("Year", year(col("Date"))) \
+        df = df.withColumn("Year", year(col("Date"))) 
