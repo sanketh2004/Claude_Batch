@@ -5,3 +5,4 @@ psycopg2-binary==2.9.7
 sqlalchemy==1.4.48
 great-expectations==0.17.12
 apache-airflow-providers-apache-spark
+apache-airflow-providers-openlineage>=1.8.0
