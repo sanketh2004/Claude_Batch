@@ -190,8 +190,9 @@ services:
       - .:/sources
 
   spark-master:
-    image: bitnami/spark:3.4
+    image: bitnami/spark:3.4.1
     command: bin/spark-class org.apache.spark.deploy.master.Master
+    user: "0:0" 
     ports:
       - "9090:8080"
       - "7077:7077"
@@ -206,8 +207,9 @@ services:
       - ./spark_jobs:/opt/spark/jobs
 
   spark-worker:
-    image: bitnami/spark:3.4
+    image: bitnami/spark:3.4.1
     command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    user: "0:0" 
     depends_on:
       - spark-master
     environment:

@@ -203,7 +203,7 @@ quality_check_task = PythonOperator(
 # Task 3: Create output directory
 create_output_dir = BashOperator(
     task_id='create_output_directory',
-    bash_command='mkdir -p /opt/airflow/data/processed && chmod -R 777 /opt/airflow/data',
+    bash_command='mkdir -p /opt/airflow/data/processed',
     dag=dag,
 )
 
