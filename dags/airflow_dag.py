@@ -220,7 +220,7 @@ spark_processing_task = SparkSubmitOperator(
         '--execution_date', '{{ ds }}'
     ],
     conf={
-        'spark.master': 'spark://spark-master:7077',
+        
         'spark.executor.memory': '1g',
         'spark.executor.cores': '1',
         'spark.sql.adaptive.enabled': 'true',
