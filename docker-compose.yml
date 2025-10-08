@@ -166,18 +166,17 @@ services:
 
   airflow-init:
     build: .
-
-    command:
-      - -c
-      - |
-        airflow db upgrade && \
-        airflow users create \
-          --username airflow \
-          --password airflow \
-          --firstname Anonymous \
-          --lastname Admin \
-          --role Admin \
+    command: >
+      bash -c "
+        airflow db upgrade &&
+        airflow users create
+          --username airflow
+          --password airflow
+          --firstname Anonymous
+          --lastname Admin
+          --role Admin
           --email admin@example.org
+      "
     environment:
       AIRFLOW__CORE__EXECUTOR: CeleryExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
