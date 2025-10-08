@@ -20,7 +20,8 @@ default_args = {
 
 # Create the DAG
 dag = DAG(
-    'weather_data_processing_pipeline',
+    'weather_data_processing_pipeline_a2' \
+    '',
     default_args=default_args,
     description='Daily batch processing of weather data using Spark',
     schedule_interval='@daily',  # Run daily at midnight
