@@ -166,7 +166,7 @@ services:
 
   airflow-init:
     build: .
-    entrypoint: /bin/bash
+
     command:
       - -c
       - |
